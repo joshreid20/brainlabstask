@@ -6,7 +6,7 @@ Pre-requisites:
 To install:
 - Pull down code from repo.
 - Navigate into the task directory.
-- Create a virtual environment using ```python -m venv env```.
+- Create a virtual environment using ```python -m venv venv```.
 - Start virtual environment using ```venv\Scripts\activate```.
 - Install requirements.txt by running ```pip install -r requirements.txt```.
 - Migrate the default models of the django application by running ```python manage.py migrate```.
