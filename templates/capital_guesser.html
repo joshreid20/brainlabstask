@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="position-absolute w-75 p-3 bg-light rounded shadow-lg" style="max-width: 500px; top: 25%">
+    <h4 class="w-100 text-center mb-3 card-header bg-dark text-light">Guess the Capital</h4>
+    <p class="w-100">Country: <span class="text-primary country">{{ country }}</span></p>
+    <form method="post" action="{% url 'main' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <input type="hidden" name="country" value="{{ country }}">
+        <input type="hidden" name="correct_answer" value="{{ correct_answer }}">
+        <input class="btn btn-primary w-100" type="submit">
+    </form>
+</div>
+{% endblock %}
